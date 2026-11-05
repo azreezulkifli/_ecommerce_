@@ -10,6 +10,15 @@ import { slugify } from "@/lib/format";
 
 export type ActionResult = { ok: boolean; error?: string; message?: string; data?: unknown };
 
+async function adminGuard(): Promise<ActionResult | null> {
+  try {
+    await requireAdmin();
+    return null;
+  } catch {
+    return { ok: false, error: "Sesi anda tidak sah atau telah tamat. Sila log masuk semula sebagai admin." };
+  }
+}
+
 const credentialsSchema = z.object({
   name: z.string().min(2, "Nama mestilah sekurang-kurangnya 2 aksara"),
   email: z.string().email("Alamat emel tidak sah"),
@@ -251,7 +260,8 @@ const productSchema = z.object({
 });
 
 export async function saveProductAction(prev: ActionResult | null, formData: FormData): Promise<ActionResult> {
-  await requireAdmin();
+  const denied = await adminGuard();
+  if (denied) return denied;
   const id = String(formData.get("id") ?? "") || null;
   const parsed = productSchema.safeParse({
     name: formData.get("name"),
@@ -302,14 +312,16 @@ export async function saveProductAction(prev: ActionResult | null, formData: For
 }
 
 export async function deleteProductAction(id: string): Promise<ActionResult> {
-  await requireAdmin();
+  const denied = await adminGuard();
+  if (denied) return denied;
   await prisma.product.delete({ where: { id } });
   revalidatePath("/admin/produk");
   return { ok: true };
 }
 
 export async function saveCategoryAction(prev: ActionResult | null, formData: FormData): Promise<ActionResult> {
-  await requireAdmin();
+  const denied = await adminGuard();
+  if (denied) return denied;
   const id = String(formData.get("id") ?? "") || null;
   const name = String(formData.get("name") ?? "").trim();
   const description = String(formData.get("description") ?? "").trim();
@@ -324,7 +336,8 @@ export async function saveCategoryAction(prev: ActionResult | null, formData: Fo
 }
 
 export async function deleteCategoryAction(id: string): Promise<ActionResult> {
-  await requireAdmin();
+  const denied = await adminGuard();
+  if (denied) return denied;
   const count = await prisma.product.count({ where: { categoryId: id } });
   if (count > 0) return { ok: false, error: `Tidak boleh padam: ${count} produk dalam kategori ini.` };
   await prisma.category.delete({ where: { id } });
@@ -333,7 +346,8 @@ export async function deleteCategoryAction(id: string): Promise<ActionResult> {
 }
 
 export async function updateOrderStatusAction(orderId: string, status: string): Promise<ActionResult> {
-  await requireAdmin();
+  const denied = await adminGuard();
+  if (denied) return denied;
   if (!ORDER_STATUSES.includes(status as (typeof ORDER_STATUSES)[number])) {
     return { ok: false, error: "Status tidak sah." };
   }
@@ -347,7 +361,8 @@ export async function updateOrderStatusAction(orderId: string, status: string): 
 }
 
 export async function markOrderPaidAction(orderId: string): Promise<ActionResult> {
-  await requireAdmin();
+  const denied = await adminGuard();
+  if (denied) return denied;
   await prisma.order.update({
     where: { id: orderId },
     data: { paymentStatus: "Dibayar", status: "Pembayaran Disahkan" },
@@ -357,7 +372,8 @@ export async function markOrderPaidAction(orderId: string): Promise<ActionResult
 }
 
 export async function savePromoAction(prev: ActionResult | null, formData: FormData): Promise<ActionResult> {
-  await requireAdmin();
+  const denied = await adminGuard();
+  if (denied) return denied;
   const id = String(formData.get("id") ?? "") || null;
   const code = String(formData.get("code") ?? "").trim().toUpperCase();
   const type = formData.get("type") === "FIXED" ? "FIXED" : "PERCENT";
@@ -379,15 +395,18 @@ export async function savePromoAction(prev: ActionResult | null, formData: FormD
 }
 
 export async function deletePromoAction(id: string): Promise<ActionResult> {
-  await requireAdmin();
+  const denied = await adminGuard();
+  if (denied) return denied;
   await prisma.promoCode.delete({ where: { id } });
   revalidatePath("/admin/promosi");
   return { ok: true };
 }
 
 export async function updateUserRoleAction(userId: string, role: string): Promise<ActionResult> {
-  const admin = await requireAdmin();
-  if (admin.id === userId) return { ok: false, error: "Tidak boleh mengubah peranan sendiri." };
+  const denied = await adminGuard();
+  if (denied) return denied;
+  const admin = await getSessionUser();
+  if (admin?.id === userId) return { ok: false, error: "Tidak boleh mengubah peranan sendiri." };
   if (!["USER", "ADMIN"].includes(role)) return { ok: false, error: "Peranan tidak sah." };
   await prisma.user.update({ where: { id: userId }, data: { role } });
   revalidatePath("/admin/pelanggan");
