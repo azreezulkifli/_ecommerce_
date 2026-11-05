@@ -22,7 +22,7 @@ export default function PolisiPemulanganPage() {
       </ul>
       <h2 className="text-lg font-bold text-ink">Proses Pemulangan</h2>
       <ol className="list-decimal pl-6 space-y-1">
-        <li>Hubungi kami di hello@kidsmart.com.my dengan nombor pesanan anda.</li>
+        <li>Hubungi kami di hello@DisneyKids.com.my dengan nombor pesanan anda.</li>
         <li>Tunggu pengesahan daripada pasukan kami.</li>
         <li>Hantar balik produk ke alamat yang diberikan.</li>
         <li>Bayaran balik akan diproses dalam 5-10 hari bekerja selepas produk diterima.</li>

@@ -18,17 +18,17 @@ export default async function HomePage() {
   return (
     <div>
       {/* Banner Utama */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[#b0565f] to-primary-soft text-white">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, #fff 0%, transparent 40%), radial-gradient(circle at 80% 70%, #D2EAB8 0%, transparent 40%)" }} />
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-[#7b5bd6] text-white">
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 20% 30%, #f7c948 0%, transparent 40%), radial-gradient(circle at 80% 70%, #ff9fb2 0%, transparent 40%)" }} />
         <div className="relative mx-auto max-w-7xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <span className="inline-block rounded-full bg-white/20 px-4 py-1 text-sm font-medium mb-4">🎉 Jualan Mega Kanak-Kanak</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">Dunia Ceria Si Kecil Bermula Di Sini!</h1>
+            <span className="inline-block rounded-full bg-gold px-4 py-1 text-sm font-bold text-primary-dark mb-4 shadow">� Keajaiban DisneyKids</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">Dunia Magis Si Kecil Bermula Di Sini!</h1>
             <p className="mt-4 text-lg text-white/85 max-w-md">
-              Pilihan pakaian comel dan mainan menarik untuk anak tersayang. Kualiti terjamin, harga mesra ibu bapa.
+              Pakaian comel dan mainan menawan untuk anak tersayang — setiap butiran direka untuk membawa senyuman ke wajah si kecil.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/promosi" className="rounded-full bg-white px-7 py-3 font-bold text-primary hover:bg-mist transition">
+              <Link href="/promosi" className="rounded-full bg-gold px-7 py-3 font-bold text-primary-dark hover:bg-leaf transition shadow">
                 Beli Sekarang
               </Link>
               <Link href="/kategori/pakaian-bayi" className="rounded-full border-2 border-white/70 px-7 py-3 font-semibold hover:bg-white/10 transition">
@@ -37,17 +37,19 @@ export default async function HomePage() {
             </div>
             {promoCode && (
               <p className="mt-6 text-sm bg-white/15 rounded-full inline-block px-4 py-2">
-                Gunakan kod <span className="font-bold">{promoCode.code}</span> untuk diskaun istimewa!
+                Gunakan kod <span className="font-bold text-gold">{promoCode.code}</span> untuk diskaun istimewa!
               </p>
             )}
           </div>
-          <div className="hidden md:grid grid-cols-2 gap-4">
-            {["produk-2", "produk-5", "produk-11", "produk-12"].map((p) => (
-              <div key={p} className="rounded-2xl overflow-hidden bg-white/15 backdrop-blur border border-white/20">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`/images/products/${p}.svg`} alt="" className="w-full h-44 object-cover" />
-              </div>
-            ))}
+          <div className="relative hidden md:block">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/brand/castle.svg" alt="Istana magis DisneyKids" className="w-full rounded-3xl shadow-2xl border-4 border-white/30" />
+            <div className="absolute -top-4 -right-4 rounded-2xl bg-white/95 px-4 py-2 text-sm font-bold text-primary shadow-lg rotate-6">
+              ✨ Sihir Setiap Hari
+            </div>
+            <div className="absolute -bottom-4 -left-4 rounded-2xl bg-gold px-4 py-2 text-sm font-bold text-primary-dark shadow-lg -rotate-3">
+              🎠 Mainan Baharu!
+            </div>
           </div>
         </div>
       </section>

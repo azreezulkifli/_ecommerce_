@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#D58B86" stop-opacity="0.25"/>
-      <stop offset="1" stop-color="#BBDDC1" stop-opacity="0.45"/>
+      <stop offset="0" stop-color="#FF9FB2" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#F7C948" stop-opacity="0.45"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="600" fill="#FBF8F4"/>
+  <rect width="600" height="600" fill="#FFFDF6"/>
   <circle cx="300" cy="300" r="210" fill="url(#g)"/>
-  <circle cx="120" cy="120" r="60" fill="#BBDDC1" opacity="0.5"/>
-  <circle cx="500" cy="140" r="40" fill="#D58B86" opacity="0.18"/>
-  <circle cx="480" cy="480" r="70" fill="#D58B86" opacity="0.12"/>
-  <circle cx="90" cy="470" r="45" fill="#BBDDC1" opacity="0.35"/>
-  <ellipse cx="300" cy="360" rx="150" ry="35" fill="#D2CCC6"/><path d="M210 360 Q210 240 300 240 Q390 240 390 360 Z" fill="#8BBBBA"/><rect x="200" y="350" width="200" height="25" rx="12" fill="#B2D2D1"/>
-  <text x="300" y="330" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="#D58B86" text-anchor="middle">Topi Matahari Kanak-Kanak</text>
-  <text x="300" y="375" font-family="Arial, sans-serif" font-size="20" fill="#8a7f78" text-anchor="middle">KIDSMART STORE</text>
+  <circle cx="120" cy="120" r="60" fill="#F7C948" opacity="0.5"/>
+  <circle cx="500" cy="140" r="40" fill="#FF9FB2" opacity="0.18"/>
+  <circle cx="480" cy="480" r="70" fill="#FF9FB2" opacity="0.12"/>
+  <circle cx="90" cy="470" r="45" fill="#F7C948" opacity="0.35"/>
+  <ellipse cx="300" cy="360" rx="150" ry="35" fill="#E6E1D8"/><path d="M210 360 Q210 240 300 240 Q390 240 390 360 Z" fill="#7B5BD6"/><rect x="200" y="350" width="200" height="25" rx="12" fill="#8FB0EA"/>
+  <text x="300" y="330" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="#FF9FB2" text-anchor="middle">Topi Matahari Kanak-Kanak</text>
+  <text x="300" y="375" font-family="Arial, sans-serif" font-size="20" fill="#55648A" text-anchor="middle">DISNEYKIDS</text>
 </svg>

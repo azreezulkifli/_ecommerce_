@@ -25,7 +25,7 @@ export function LoginForm() {
         Belum ada akaun? <Link href="/daftar" className="text-primary font-semibold hover:underline">Daftar Sekarang</Link>
       </p>
       <p className="text-xs text-center text-ink-soft bg-mist/30 rounded-lg px-3 py-2">
-        Akaun demo: siti@example.com / password123 • Admin: admin@kidsmart.com.my / admin123
+        Akaun demo: siti@example.com / password123 • Admin: admin@DisneyKids.com.my / admin123
       </p>
     </form>
   );

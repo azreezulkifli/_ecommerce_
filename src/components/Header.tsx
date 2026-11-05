@@ -30,8 +30,8 @@ export function Header({ user }: { user: { name: string; role: string } | null }
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-16 items-center gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white font-bold">K</span>
-            <span className="text-xl font-bold text-primary tracking-tight">KidSmart</span>
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold text-primary-dark font-extrabold text-lg shadow-sm">D</span>
+            <span className="text-xl font-extrabold text-primary tracking-tight">Disney<span className="text-gold">Kids</span></span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1 ml-4">

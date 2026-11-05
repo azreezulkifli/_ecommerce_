@@ -6,8 +6,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-sm">K</span>
-            <span className="text-lg font-bold text-primary">KidSmart</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold text-primary-dark font-extrabold text-sm">D</span>
+            <span className="text-lg font-extrabold text-primary">Disney<span className="text-gold">Kids</span></span>
           </div>
           <p className="text-sm text-ink-soft">
             Kedai dalam talian pakaian dan mainan kanak-kanak yang selamat, berkualiti dan mesra keluarga.
@@ -41,7 +41,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-taupe/60 py-4 text-center text-xs text-ink-soft">
-        © 2026 KidSmart Store. Hak cipta terpelihara. Dibuat dengan ❤️ di Malaysia.
+        © 2026 DisneyKids Store. Hak cipta terpelihara. Dibuat dengan ❤️ di Malaysia.
       </div>
     </footer>
   );

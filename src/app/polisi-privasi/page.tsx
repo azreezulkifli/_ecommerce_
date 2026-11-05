@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Polisi Privasi" };
 export default function PolisiPrivasiPage() {
   return (
     <StaticPage title="Polisi Privasi">
-      <p>KidSmart Store komited untuk melindungi privasi pelanggan kami. Polisi ini menerangkan cara kami mengumpul, menggunakan dan melindungi maklumat peribadi anda.</p>
+      <p>DisneyKids Store komited untuk melindungi privasi pelanggan kami. Polisi ini menerangkan cara kami mengumpul, menggunakan dan melindungi maklumat peribadi anda.</p>
       <h2 className="text-lg font-bold text-ink">1. Maklumat yang Kami Kumpul</h2>
       <ul className="list-disc pl-6 space-y-1">
         <li>Maklumat akaun: nama, emel, nombor telefon.</li>

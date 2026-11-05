@@ -12,7 +12,7 @@ export default function HubungiKamiPage() {
         <div className="rounded-xl bg-cream p-4 text-center">
           <p className="text-2xl mb-1">📧</p>
           <p className="font-semibold text-sm">Emel</p>
-          <p className="text-sm">hello@kidsmart.com.my</p>
+          <p className="text-sm">hello@DisneyKids.com.my</p>
         </div>
         <div className="rounded-xl bg-cream p-4 text-center">
           <p className="text-2xl mb-1">📞</p>

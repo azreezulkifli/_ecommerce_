@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 640 520">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bcd8ff"/>
+      <stop offset="1" stop-color="#eaf3ff"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7b5bd6"/>
+      <stop offset="1" stop-color="#5a3fb0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="520" rx="24" fill="url(#sky)"/>
+  <!-- matahari -->
+  <circle cx="540" cy="80" r="42" fill="#f7c948"/>
+  <g stroke="#f7c948" stroke-width="6" stroke-linecap="round">
+    <line x1="540" y1="18" x2="540" y2="30"/><line x1="540" y1="130" x2="540" y2="142"/>
+    <line x1="478" y1="80" x2="490" y2="80"/><line x1="590" y1="80" x2="602" y2="80"/>
+    <line x1="496" y1="36" x2="504" y2="44"/><line x1="576" y1="116" x2="584" y2="124"/>
+    <line x1="584" y1="36" x2="576" y2="44"/><line x1="504" y1="116" x2="496" y2="124"/>
+  </g>
+  <!-- awan -->
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="110" cy="90" rx="46" ry="20"/><ellipse cx="140" cy="78" rx="34" ry="18"/><ellipse cx="88" cy="80" rx="26" ry="14"/>
+    <ellipse cx="430" cy="60" rx="38" ry="16"/><ellipse cx="456" cy="50" rx="26" ry="13"/>
+  </g>
+  <!-- tanah -->
+  <ellipse cx="320" cy="470" rx="290" ry="46" fill="#bfe3c0"/>
+  <ellipse cx="320" cy="462" rx="250" ry="34" fill="#d8f0d9"/>
+  <!-- istana -->
+  <g>
+    <!-- menara kiri -->
+    <rect x="150" y="250" width="90" height="190" rx="8" fill="#f3e6d8"/>
+    <path d="M140 250 L195 160 L250 250 Z" fill="url(#roof)"/>
+    <rect x="183" y="170" width="24" height="34" rx="4" fill="#f7c948"/>
+    <line x1="195" y1="170" x2="195" y2="140" stroke="#8a5a2b" stroke-width="4"/>
+    <path d="M195 140 L225 148 L195 158 Z" fill="#ef5350"/>
+    <!-- menara kanan -->
+    <rect x="400" y="250" width="90" height="190" rx="8" fill="#f3e6d8"/>
+    <path d="M390 250 L445 160 L500 250 Z" fill="url(#roof)"/>
+    <rect x="433" y="170" width="24" height="34" rx="4" fill="#f7c948"/>
+    <line x1="445" y1="170" x2="445" y2="140" stroke="#8a5a2b" stroke-width="4"/>
+    <path d="M445 140 L475 148 L445 158 Z" fill="#ef5350"/>
+    <!-- kubah tengah -->
+    <rect x="250" y="270" width="140" height="170" rx="8" fill="#fdf3e3"/>
+    <path d="M235 270 Q320 140 405 270 Z" fill="url(#roof)"/>
+    <circle cx="320" cy="185" r="16" fill="#f7c948"/>
+    <line x1="320" y1="169" x2="320" y2="130" stroke="#8a5a2b" stroke-width="5"/>
+    <path d="M320 130 L360 140 L320 152 Z" fill="#2b5fd9"/>
+    <!-- bendera menara -->
+    <line x1="150" y1="250" x2="150" y2="215" stroke="#8a5a2b" stroke-width="4"/>
+    <path d="M150 215 L178 222 L150 232 Z" fill="#2b5fd9"/>
+    <line x1="500" y1="250" x2="500" y2="215" stroke="#8a5a2b" stroke-width="4"/>
+    <path d="M500 215 L528 222 L500 232 Z" fill="#2b5fd9"/>
+    <!-- tingkap -->
+    <g fill="#8fb0ea">
+      <rect x="172" y="290" width="26" height="40" rx="13"/>
+      <rect x="215" y="290" width="26" height="40" rx="13"/>
+      <rect x="422" y="290" width="26" height="40" rx="13"/>
+      <rect x="465" y="290" width="26" height="40" rx="13"/>
+      <rect x="292" y="300" width="24" height="36" rx="12"/>
+      <rect x="344" y="300" width="24" height="36" rx="12"/>
+      <rect x="305" y="360" width="30" height="45" rx="15"/>
+    </g>
+    <!-- pintu -->
+    <path d="M295 440 L295 385 Q320 365 345 385 L345 440 Z" fill="#7b5bd6"/>
+    <circle cx="338" cy="412" r="4" fill="#f7c948"/>
+    <!-- dek band istana -->
+    <rect x="130" y="440" width="380" height="18" rx="9" fill="#e8d5b8"/>
+  </g>
+  <!-- bintang ajaib -->
+  <g fill="#f7c948">
+    <path d="M90 300 l6 14 l14 6 l-14 6 l-6 14 l-6 -14 l-14 -6 l14 -6 Z"/>
+    <path d="M560 330 l5 11 l11 5 l-11 5 l-5 11 l-5 -11 l-11 -5 l11 -5 Z"/>
+    <path d="M60 180 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 l9 -4 Z"/>
+  </g>
+  <g fill="#ff9fb2">
+    <circle cx="120" cy="380" r="8"/>
+    <circle cx="540" cy="250" r="7"/>
+    <circle cx="80" cy="430" r="6"/>
+  </g>
+</svg>
