@@ -3,6 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   allowedDevOrigins: ["127.0.0.1"],
+  outputFileTracingIncludes: {
+    "/**": ["./prisma/dev.db"],
+  },
   experimental: {
     serverActions: {
       allowedOrigins: ["127.0.0.1:58261", "localhost:58261"],
